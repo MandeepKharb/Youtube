@@ -1,0 +1,6 @@
+pandas>=0.19
+Cython>= 0.28.5
+numpy>=1.9.2
+scikit-learn==0.22.1
+Flask==2.1.0
+gunicorn==19.9.0
