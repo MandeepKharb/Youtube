@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Segmentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 36px;
+        color: #333;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        margin-top: 50px;
+        width: 50%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      label {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      
+      input[type="file"] {
+        border: 2px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      }
+      
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+	  
+	  .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.item {
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#results {
+  margin-top: 50px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s infinite linear;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: none;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+    </style>
+	
+<script>
+  function handleSubmit(event) {
+    event.preventDefault(); // prevent the form from submitting normally
+    
+    var file = document.getElementById("file-upload").files[0];
+    var formData = new FormData();
+    formData.append("file", file);
+    
+    var spinner = document.getElementById("spinner");
+    spinner.style.display = "block";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/predict");
+    xhr.send(formData);
+    xhr.onreadystatechange = function() {
+
+      document.getElementById("results").innerHTML = "";
+
+      var response = JSON.parse(xhr.responseText);
+	  
+	  
+     var amountImg = document.createElement("img");
+	 amountImg.src = response.amount_img;
+	 amountImg.style.width = "30%"; // Set the width of the image element
+	 var freqImg = document.createElement("img");
+	 freqImg.src = response.freq_img;
+	 freqImg.style.width = "30%"; // Set the width of the image element
+	 var recencyImg = document.createElement("img");
+	 recencyImg.src = response.recency_img;
+	 recencyImg.style.width = "30%"; // Set the width of the image element
+
+
+      spinner.style.display = "none";
+
+      var imagesDiv = document.createElement("div");
+      imagesDiv.style.display = "flex";
+      imagesDiv.style.flexWrap = "wrap";
+      imagesDiv.style.marginTop = "20px";
+      imagesDiv.style.marginBottom = "20px";
+      imagesDiv.style.justifyContent = "space-between";
+      imagesDiv.style.alignItems = "center";
+      imagesDiv.style.width = "100%";
+      imagesDiv.appendChild(amountImg);
+      imagesDiv.appendChild(freqImg);
+      imagesDiv.appendChild(recencyImg);
+      document.getElementById("results").appendChild(imagesDiv);
+    };
+  }
+</script>
+
+
+
+
+  </head>
+  <body>
+    <h1>Customer Segmentation App</h1>
+    <form id="upload-form" onsubmit="handleSubmit(event)">
+      <label for="file-upload">Upload CSV file:</label>
+      <input type="file" id="file-upload">
+      <button type="submit">Submit</button>
+    </form>
+	<div id="spinner" class="spinner"></div>
+	 <div id="results"></div>
+  </body>
+</html>
