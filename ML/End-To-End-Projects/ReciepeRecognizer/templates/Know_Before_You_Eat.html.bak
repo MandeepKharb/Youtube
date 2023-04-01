@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Know Before You Eat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="data:,">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <link rel="icon" href="data:;base64,=">
+
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="{{ url_for('static', filename='css/predict_style.css') }}" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.timepicker.css') }}">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="{{ url_for('static', filename='css/predict_style.css') }}" rel="stylesheet">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+		      <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Know Before You Eat<br><small>Delicous</small></a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="oi oi-menu"></span> Menu
+		      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+			  <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+			  <li class="nav-item active"><a href=#Predict class="nav-link">Predict</a></li>
+	          <!--<li class="nav-item"><a href=#Recipe class="nav-link">Recipe</a></li>-->
+	         <!-- <li class="nav-item"><a href=#Model class="nav-link">Models</a></li> -->
+	          
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel img" style="background-image: url(static/images/bg_1.jpg);">
+      <div class="slider-item" style="background-image: url(static/images/bg_3.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Welcome</span>
+              <h1 class="mb-4">Predict Your Food Before You Eat :) </h1>
+              <p class="mb-4 mb-md-5">Interactive Web Page for Recognizing the dish names based on the images and providing nutritional facts about the dish </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="slider-item">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-6 col-sm-12 ftco-animate">
+            	<span class="subheading">Delicious</span>
+              <h1 class="mb-4">Italian Cuisine</h1>
+              <p class="mb-4 mb-md-5">When Life Give you pizza, Eat it Quickly before anyone realizes that you have it. </p>
+            </div>
+            <div class="col-md-6 ftco-animate">
+            	<img src="/static/images/bg_1.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
+            	<span class="subheading">Crunchy</span>
+              <h1 class="mb-4">Italian Pizza</h1>
+              <p class="mb-4 mb-md-5">My love is Pizza Shaped. Won't you have a slice? It's circular, so there's enough to go around.</p>
+            </div>
+            <div class="col-md-6 ftco-animate">
+            	<img src="/static/images/bg_2.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+     
+    </section>
+
+    <section id="Predict" class="padding">
+      <center>
+    	<div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+          <h2 class="mb-4"><span class="flaticon-pizza"> Know Before You Eat</span></h2>
+        </div>
+        <div>
+  				<p class=know>Occasionally, we see images of food that look similar to what we have eaten before but we are not sure about the name of the dish. We came up with an idea to identify food names with an image using classification algorithms. Here the users can use the web app easily by uploading an image of a dish and getting accurate/predicted feedback on what the food is and getting the nutritional facts behind the dish.
+				</p>
+  			</div>
+      </div>
+    </center>
+    </section>
+
+    <section class="padding"> 
+      <center> <div class="heading-section ftco-animate ">
+      <h2 class="mb-4"><span>Food Recognizer</span></h2>
+      </div>
+      
+      <div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label button ftco-animate text-center">
+            Upload Image
+        </label>
+        <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+           <div class="img-preview" style="margin: 2em auto;">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary button btn-lg ftco-animate text-center " id="btn-predict">Predict the Dish </button>
+        </div>
+        </div>
+
+        <div class="loader" style="display:none; margin: auto;"></div>
+
+        <p id="result" class="food">
+        
+        </p>
+
+
+    </div></center> 
+    &nbsp;&nbsp;
+    </section>
+
+    <section class="ftco-section ftco-services">
+    	
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Machine Learning</h2>
+          </div>
+        </div>
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Train</h3>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-bicycle"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Test</h3>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Predict</h3>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    
+
+    <!--<section id="Model" class="ftco-gallery">
+    	<div class="container-wrap">
+    		<div class="row no-gutters">
+					<div class="col-md-3 ftco-animate">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(static/images/gallery-1.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(static/images/gallery-2.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(static/images/gallery-3.jpeg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(static/images/gallery-4.jpg);">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+        </div>
+    	</div>
+    </section>-->
+
+    
+
+		
+			<div class="overlay"></div>
+      
+    </section>
+
+    
+
+    
+
+    <footer class="ftco-footer ftco-section img">
+		
+      <div class="container">
+
+	  <div class="row">
+		<div class="col-md-12 text-center">
+
+		  <p>
+			
+				<div>
+				  <div class="ftco-footer-widget mb-4">
+					<h2 class="ftco-heading-2">Know Before You Eat</h2>
+					<p>Don't Focus on how much you eat... Focus on what you eat :D </p>
+					
+				  </div>
+				</div>
+				
+			  
+		<!--
+			<ul class="ftco-footer-social list-unstyled">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			  </ul> -->
+			  
+		  </p>
+		</div>
+	  </div>
+    </footer>
+    
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="{{ url_for('static', filename='js/KnowBeforeYouEat.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+  </body>
+</html>

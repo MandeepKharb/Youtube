@@ -1,0 +1,12 @@
+beautifulsoup4==4.8.2
+bs4==0.0.1
+Flask==1.1.1
+gevent==1.4.0
+Jinja2==2.11.0
+numpy==1.19.2
+pandas==0.25.3
+Pillow==7.2.0
+splinter==0.13.0
+Werkzeug==0.16.1
+gunicorn==19.0.0
+requests
